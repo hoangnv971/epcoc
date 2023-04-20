@@ -1,0 +1,28 @@
+.box-list{
+
+}
+.box-card{
+    background-image: url("/images/background_img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 440px;
+    min-height: 352px;   
+    color:white;
+    text-align: center;
+}
+.box-header{
+    padding: 13px 7px;
+}
+.box-header h3{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+.box-header p{
+    margin: 0;
+    font-size: 12px;
+}
+.box-body{
+    display: flex;
+    justify-content: space-around;
+}
