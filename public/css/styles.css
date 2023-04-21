@@ -1,28 +1,87 @@
+@media (min-width: 1400px) {
+    .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1400px;
+    }
+}
+@font-face {
+    font-family: roboto-black;
+    src: url('/font/roboto/Roboto-Black.tff');
+  }
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
 .box-list{
-
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 12px;
+    font-family: roboto-black, sans-serif;
+    word-spacing: -1px;
 }
 .box-card{
     background-image: url("/images/background_img.png");
     background-repeat: no-repeat;
     background-size: cover;
     width: 440px;
-    min-height: 352px;   
+    height: 352px;   
     color:white;
     text-align: center;
+    background-position: center;
 }
 .box-header{
-    padding: 13px 7px;
+    padding: 13px 7px 0;
 }
 .box-header h3{
-    font-size: 12px;
     font-weight: bold;
     margin-bottom: 0px;
+    font-size: inherit;
 }
+
+.box-header .address{
+    font-size: 11px;
+}
+
 .box-header p{
     margin: 0;
-    font-size: 12px;
 }
 .box-body{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.box-body .qr-code{
+    margin: 0 25px;
+}
+
+.box-footer{
+    margin-top: 15px;
+
+}
+.box-footer .quotes{
+    font-weight: bold;
+    padding-top: 3px;
+}
+.box-card .information{
+    color: #002D86;
+    display: flex;
+    text-align: left;
+    font-family: serif;
+    padding-top: 11px;
+    font-weight: bold;
+}
+.info-detail{
+    min-width: 130px;
+    padding: 0 25px;
+}
+
+.info-detail p{
+    margin-bottom: 0;
+}
+
+.last-quotes{
+    color:red;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px 25px;
 }
