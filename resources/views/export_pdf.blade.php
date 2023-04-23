@@ -11,23 +11,24 @@
             font-family: roboto-black;
             src: url('/font/roboto/Roboto-Black.tff');
         }
+
         .box-list{
-            display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
             font-size: 5px;
             font-family: DejaVu Sans, sans-serif;
+            display: -webkit-box; /* wkhtmltopdf uses this one */
+            display: inline-table;
+            -webkit-box-pack: center; /* wkhtmltopdf uses this one */
+            justify-content: center;
         }
         .box-card{
             background-image: url('{{public_path("/images/background_img.png")}}');
             background-repeat: no-repeat;
             background-size: cover;
-            width: 32%;
-            display: flex;
-            height: 352px;   
+            width: 219px;
+            height: 175px;   
             color:white;
             text-align: center;
-            float:right;
             background-position: center;
         }
         .box-header{
@@ -47,18 +48,30 @@
         .box-header p{
             margin: 0;
         }
+
+        .before-body{
+            margin-top: 5px;
+            color : #002D86;
+            font-size: 8px;
+            font-weight: bold;
+        }
         .box-body{
-            display: flex;
         }
 
         .box-body .qr-code{
-            display: inline-block;
-            margin-top: 30px;
+            margin: 10px 13px 0px;
         }
 
-        .box-footer{
-            margin-top: 15px;
+        .box-body .qr-code.image-left{
+            float: left;
+        }
 
+        .box-body .qr-code.image-right{
+            float: right;
+        }
+        .box-footer{
+            padding-top: 6px;
+            clear: both;
         }
         .box-footer .quotes{
             font-weight: bold;
@@ -66,25 +79,22 @@
         }
         .box-card .information{
             color: #002D86;
-            display: flex;
             text-align: left;
-            padding-top: 11px;
             font-weight: bold;
         }
         .info-detail{
-            min-width: 130px;
-            padding: 0 25px;
+            padding-left: 12px;
+            float: left;
         }
 
         .info-detail p{
             margin-bottom: 0;
         }
-
         .last-quotes{
             color:red;
             font-weight: bold;
-            text-align: left;
-            padding: 5px 25px;
+            text-align: center;
+            clear: both;
         }
     </style>
 </head>

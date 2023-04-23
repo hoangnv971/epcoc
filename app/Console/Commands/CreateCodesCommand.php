@@ -48,9 +48,11 @@ class CreateCodesCommand extends Command
             $code_id = $dateFomated.' - '. sprintf("%05d", $code->id);
             $code->update(['code_id' => $code_id]);
             $listCodes[] = $code;
-            $this->info(($code->code_id ?? '').' created!');
+            $this->info($i.'.'.($code->code_id ?? '').' created!');
         }
+        $this->info('Exporting pdf file');
         Pdf::setOption(['dpi' => 150, 'defaultFont' => 'sans-serif']);
+        $this->info('...');
         Pdf::loadView('export_pdf', compact('listCodes', 'logoPath'))->setPaper('A4')->save('files/'.$dateFomated.substr(time(), 4, -1).'.pdf', 'local');
         
         $this->info('End!');

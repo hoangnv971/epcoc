@@ -7,6 +7,9 @@
             <p class="address">Xưởng sản xuất lô A2.7, KĐT Thanh Hà B, Cienco 5, Cự Khê, Thanh Oai, Hà Nội</p>
             <p class="tax-number">Mã số thuế: 010761553</p>
         </div>
+        <div class="before-body">
+            TEM XÁC THỰC HÀNG CHÍNH HÃNG
+        </div>
         <div class="box-body">
             <div class="image-left qr-code">
                 <img src="data:image/png;base64, {!! base64_encode(QrCode::format('png')->merge($logoPath ?? '', 0.3, true)
